@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/cardviewCoupons" android:background="@color/pwe_card_background" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="2dp" app:cardElevation="3dp" app:cardUseCompatPadding="true">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/tems" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_margin="0dp">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/werwre" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="match_parent">
+                    <ImageView android:layout_gravity="center" android:id="@+id/img_coupon" android:layout_width="100dp" android:layout_height="70dp" android:layout_margin="5dp" android:foregroundGravity="center"/>
+                </LinearLayout>
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="13sp" android:textStyle="bold" android:textColor="@android:color/secondary_text_light" android:id="@+id/text_coupons_offer_title" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="2dp" android:text="Flat 10% off on minimum transaction of Rs.50 (Visa Cards)" android:minLines="1" android:layout_weight="0.7"/>
+                    <ImageView android:layout_gravity="center" android:id="@+id/image_view_view_coupon" android:background="@drawable/maximize_image_icon_click_effect" android:clickable="true" android:layout_width="25dp" android:layout_height="25dp" android:layout_margin="5dp" android:src="@drawable/max_icon_grey"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1.2">
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="2dp">
+                            <TextView android:textSize="12sp" android:textColor="@color/green" android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Worth" android:singleLine="true"/>
+                            <TextView android:textSize="12sp" android:textColor="@color/green" android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="@string/rupees" android:singleLine="true"/>
+                            <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="@color/green" android:layout_gravity="left" android:id="@+id/text_coupon_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" 095666" android:singleLine="true"/>
+                        </LinearLayout>
+                        <TextView android:textSize="12sp" android:textColor="@color/pwe_title_color" android:layout_gravity="left" android:id="@+id/text_coupons_brand_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="2dp" android:text="FreeCharge" android:singleLine="true"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="right" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_weight="1">
+                        <Button android:id="@+id/button_select_coupon" android:background="@null" android:paddingLeft="5dp" android:paddingRight="5dp" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

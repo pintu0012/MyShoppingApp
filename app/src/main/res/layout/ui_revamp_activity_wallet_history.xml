@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/greyeff2f4" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/ui_revamp_toolbar_layout"/>
+    <RelativeLayout android:id="@+id/transactions_layout" android:paddingLeft="@dimen/dimen_16dp" android:paddingRight="@dimen/dimen_16dp" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/progress_layout" android:layout_below="@+id/bar_layout">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/wallet_history_recyclerview" android:paddingTop="@dimen/margin_4" android:paddingBottom="@dimen/dimen_16dp" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:overScrollMode="never" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:id="@+id/progress_layout" android:background="@color/greyeff2f4" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <ProgressBar android:theme="@style/progressBarColorRevamp" android:id="@+id/progress" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <include android:id="@+id/no_transactions_found" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/bar_layout" layout="@layout/ui_revamp_no_transaction_history_found"/>
+    <include layout="@layout/ui_revamp_no_internet_layout"/>
+</RelativeLayout>

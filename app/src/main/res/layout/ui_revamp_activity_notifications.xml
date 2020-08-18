@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/background_eff2" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/notifications_rv" android:paddingLeft="@dimen/dimen_16dp" android:paddingTop="@dimen/dimen_16dp" android:paddingRight="@dimen/dimen_16dp" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/bar_layout"/>
+    <include layout="@layout/ui_revamp_toolbar_layout"/>
+</RelativeLayout>

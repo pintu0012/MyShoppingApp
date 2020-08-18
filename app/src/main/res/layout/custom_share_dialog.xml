@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="15dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="15dp" android:text="Share on"/>
+    <GridView android:gravity="center" android:layout_gravity="center" android:id="@+id/appvirality_gridView" android:paddingTop="10dp" android:paddingBottom="20dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:horizontalSpacing="5dp" android:verticalSpacing="15dp" android:numColumns="3" android:isScrollContainer="false"/>
+</LinearLayout>

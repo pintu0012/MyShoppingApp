@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <group>
+        <item android:icon="@drawable/ui_revamp_nav_account_icon" android:id="@+id/my_account" android:checked="false" android:title="@string/drawer_menu_myaccount"/>
+        <item android:icon="@drawable/ui_revamp_nav_subscriptions_icon" android:id="@+id/my_subscriptions" android:checked="false" android:title="@string/my_subscriptions"/>
+        <item android:icon="@drawable/ui_revamp_nav_category" android:id="@+id/shop_by_category" android:checked="false" android:title="@string/shop_by_category"/>
+        <item android:icon="@drawable/ui_revamp_nav_notification" android:id="@+id/notifications" android:checked="false" android:title="@string/drawer_menu_notifications"/>
+        <item android:icon="@drawable/ui_revamp_nav_star" android:id="@+id/rate_your_app" android:checked="false" android:title="@string/drawer_menu_rate_our_app"/>
+        <item android:icon="@drawable/ui_revamp_nav_help" android:id="@+id/help" android:checked="false" android:title="@string/drawer_menu_help"/>
+        <item android:icon="@drawable/ui_revamp_nav_refer_and_earn" android:id="@+id/refer" android:checked="false" android:title="Refer and Earn"/>
+        <item android:icon="@drawable/ui_revamp_nav_share" android:id="@+id/share" android:checked="false" android:title="Share"/>
+        <item android:icon="@drawable/ui_revamp_nav_logout" android:id="@+id/logout" android:checked="false" android:title="@string/drawer_menu_logout"/>
+    </group>
+</menu>

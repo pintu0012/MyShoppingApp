@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:id="@+id/clearchat" android:orderInCategory="100" android:title="Clear Chat" app:showAsAction="never"/>
+    <item android:id="@+id/endchat" android:visible="false" android:orderInCategory="100" android:title="End Chat" app:showAsAction="never"/>
+    <item android:icon="@drawable/kapchatattachmentsicon" android:id="@+id/attachment" android:visible="false" android:title="Attachment" app:showAsAction="always"/>
+    <item android:icon="?attr/kc_attach_camera_icon" android:id="@+id/kapchat_camera" android:title="Attachment" app:showAsAction="always"/>
+    <item android:icon="?attr/kc_attach_gallery_icon" android:id="@+id/kapchat_gallery" android:title="Attachment" app:showAsAction="always"/>
+</menu>

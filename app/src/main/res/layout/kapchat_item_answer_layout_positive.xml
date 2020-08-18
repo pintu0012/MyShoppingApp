@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:textSize="?attr/kc_positive_button_text_size_on_notification_layout" android:textColor="?attr/kc_positive_button_text_color_on_notification_layout" android:id="@+id/positive" android:background="?attr/kc_positive_button_on_notification_layout" android:paddingLeft="25dp" android:paddingTop="5dp" android:paddingRight="25dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:text="Yes"/>
+</LinearLayout>

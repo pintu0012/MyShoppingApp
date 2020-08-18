@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/earnings_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/user_settings"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/earnings_header_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="left|center_vertical|center_horizontal|center"
+                    android:text="@string/earnings_label"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/all_earnings_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/coupon_pools_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/earnings_layout"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/user_settings"
+            android:orientation="vertical"
+            android:visibility="?attr/av_show_coupon_pools_bar">
+
+            <LinearLayout
+                android:id="@+id/coupon_pools_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical|center_horizontal|center"
+                    android:text="@string/select_from_coupon_pool"
+                    android:textColor="#ffffff" />
+
+                <ImageView
+                    android:id="@+id/coupon_pools_dropdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical|center_horizontal|center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/drop_down_img" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/coupon_pools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/custom_ref_code_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/coupon_pools_layout"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/user_settings"
+            android:orientation="vertical"
+            android:visibility="?attr/av_show_custom_ref_code_bar">
+
+            <LinearLayout
+                android:id="@+id/custom_ref_code_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical|center_horizontal|center"
+                    android:text="@string/personal_url_label"
+                    android:textColor="#ffffff" />
+
+                <ImageView
+                    android:id="@+id/custom_ref_code_dropdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical|center_horizontal|center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/drop_down_img" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/custom_ref_code_inner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/edit_ref_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/edittext_bg"
+                    android:cursorVisible="true"
+                    android:digits="0123456789qwertzuiopasdfghjklyxcvbnm"
+                    android:maxLength="10"
+                    android:minWidth="120dp"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_save_ref_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn"
+                    android:enabled="false"
+                    android:text="@string/save_label"
+                    android:textColor="#ffffff" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar_ref_code"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_friends_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/custom_ref_code_layout"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/user_settings"
+            android:orientation="vertical"
+            android:visibility="?attr/av_show_friends_bar">
+
+            <LinearLayout
+                android:id="@+id/friends_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical|center_horizontal|center"
+                    android:text="@string/your_friends_label"
+                    android:textColor="#ffffff" />
+
+                <ImageView
+                    android:id="@+id/friends_dropdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical|center_horizontal|center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/drop_down_img" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/friends_inner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TableLayout
+                    android:id="@+id/friends_table"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:shrinkColumns="1"
+                    android:stretchColumns="1" />
+
+                <LinearLayout
+                    android:id="@+id/prev_next_btn_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_prev_friends"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn"
+                        android:padding="5dp"
+                        android:text="Prev"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_next_friends"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/btn"
+                        android:padding="5dp"
+                        android:text="Next"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_coupons_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_friends_layout"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/user_settings"
+            android:orientation="vertical"
+            android:visibility="?attr/av_show_coupons_bar">
+
+            <LinearLayout
+                android:id="@+id/user_coupons_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical|center_horizontal|center"
+                    android:text="@string/my_coupons_label"
+                    android:textColor="#ffffff" />
+
+                <ImageView
+                    android:id="@+id/user_coupons_dropdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical|center_horizontal|center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/drop_down_img" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/user_coupons_inner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TableLayout
+                    android:id="@+id/user_coupons_table"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="0,1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_12dp">
+    <RelativeLayout android:id="@+id/layout_title" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true">
+        <TextView android:textSize="@dimen/text_size_20sp" android:textColor="@color/black" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_16dp" android:layout_marginRight="@dimen/dimen_16dp" android:layout_toLeftOf="@+id/view_all" android:layout_alignParentLeft="true" android:fontFamily="@font/proximanovasemibold"/>
+        <TextView android:textSize="@dimen/textsize_13sp" android:textColor="@color/green84c225" android:id="@+id/view_all" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_16dp" android:text="@string/view_all" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:textAllCaps="true" android:fontFamily="@font/proximanovasemibold"/>
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/home_recycler_view" android:paddingLeft="@dimen/dimen_16dp" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_4dp" android:layout_below="@+id/layout_title"/>
+    <com.facebook.shimmer.ShimmerFrameLayout android:id="@+id/dummy_products" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_16dp" android:layout_marginRight="@dimen/dimen_16dp" android:layout_below="@+id/layout_title" app:shimmer_base_alpha="0.6" app:shimmer_dropoff="1" app:shimmer_tilt="0">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <include layout="@layout/ui_revamp_product_item_shimmer_layout"/>
+            <include layout="@layout/ui_revamp_product_item_shimmer_layout"/>
+            <include layout="@layout/ui_revamp_product_item_shimmer_layout"/>
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/white" app:cardElevation="0dp" app:cardPreventCornerOverlap="false">
+    <LinearLayout android:padding="@dimen/margin_12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="1">
+        <RelativeLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8">
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/textsize_12" android:textColor="@color/black2d383c" android:id="@+id/recharge_details" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reserve on Sep 04, 2019 03:04" android:fontFamily="@font/proxima_nova_reg"/>
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/textsize_10sp" android:textColor="@color/greyd747e82" android:id="@+id/payment_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_4" android:layout_below="@+id/recharge_details" android:fontFamily="@font/proxima_nova_reg"/>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.2">
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/textsize_12" android:textColor="@color/black" android:id="@+id/recharge_status_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Success" android:layout_alignParentRight="true" android:fontFamily="@font/proximanovabold"/>
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/text_size_12sp" android:textColor="@color/black" android:layout_gravity="end" android:id="@+id/recharge_amount_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_4" android:text="₹ 100" android:layout_below="@+id/recharge_status_text" android:layout_alignParentRight="true" android:fontFamily="@font/proximanovasemibold"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:id="@+id/view2" android:background="@color/background_default" android:layout_width="match_parent" android:layout_height="1dp"/>
+</androidx.cardview.widget.CardView>

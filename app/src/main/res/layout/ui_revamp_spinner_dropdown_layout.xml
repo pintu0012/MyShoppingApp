@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:paddingLeft="@dimen/margin_12dp" android:paddingRight="@dimen/margin_12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/textsize_14sp" android:textColor="@color/black2d383c" android:id="@+id/spinner_text" android:background="@drawable/ui_revamp_border_bottom" android:paddingTop="@dimen/margin_8dp" android:paddingBottom="@dimen/margin_8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="@font/proxima_nova_reg" style="@style/spinnerDropDownItemStyle"/>
+</LinearLayout>

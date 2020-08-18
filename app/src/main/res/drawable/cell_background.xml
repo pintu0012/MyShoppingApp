@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:drawable="@drawable/cell_transparent_background" app:state_date_regular="true"/>
+    <item android:drawable="@drawable/circular_background_red" app:state_date_today="true"/>
+    <item android:drawable="@drawable/circular_background" app:state_date_selected="true"/>
+</selector>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/cardviewCard" android:background="@color/pwe_card_background" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="3dp" app:cardElevation="2dp" app:cardUseCompatPadding="true">
+    <LinearLayout android:orientation="vertical" android:id="@+id/linear_main_layout" android:background="@color/pwe_saved_card_background" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="match_parent">
+                <ImageView android:layout_gravity="center_horizontal" android:id="@+id/img_card_type" android:layout_width="40dp" android:layout_height="30dp" android:layout_margin="5dp" android:foregroundGravity="center"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="10dp">
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="50dp" android:layout_marginLeft="10dp">
+                    <TextView android:textSize="16sp" android:textColor="@android:color/secondary_text_light" android:id="@+id/text_saved_card_no" android:padding="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text=""/>
+                </LinearLayout>
+                <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:orientation="horizontal" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginLeft="10dp">
+                    <ImageButton android:id="@+id/ib_remove_card" android:background="@drawable/swipe_image_click_effect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/remove_icon" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="50dp" android:layout_weight="1">
+                <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginLeft="20dp" android:layout_weight="1">
+                    <CheckBox android:id="@+id/check_dont_have_cvv" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:textColor="@color/pwe_icon_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="I don&apos;t have CVV"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="50dp" android:layout_weight="2">
+                    <EditText android:textColor="@color/pwe_text_color" android:textColorHint="@color/pwe_hint_color" android:id="@+id/edit_cvv_number" android:background="@drawable/custom_background_white" android:padding="7dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="5dp" android:hint="CVV" android:maxLength="3" android:inputType="numberPassword"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

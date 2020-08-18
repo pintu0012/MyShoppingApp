@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin_4dp" android:foreground="?attr/selectableItemBackground" app:cardBackgroundColor="@color/white" app:cardCornerRadius="@dimen/dimen_5dp" app:cardElevation="0dp" app:cardPreventCornerOverlap="false">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dimen_8dp">
+        <ImageView android:id="@+id/category_image" android:background="@color/color_e0e6" android:layout_width="@dimen/dimen_64dp" android:layout_height="@dimen/dimen_64dp" android:layout_centerHorizontal="true"/>
+        <TextView android:textSize="@dimen/textsize_12sp" android:textColor="@color/black" android:ellipsize="end" android:gravity="center" android:id="@+id/category_name_text" android:background="@color/color_e0e6" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_10dp" android:layout_below="@+id/category_image" android:layout_alignLeft="@+id/category_image" android:layout_alignRight="@+id/category_image" android:layout_centerHorizontal="true" android:fontFamily="@font/proxima_nova_reg"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

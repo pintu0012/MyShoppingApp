@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+    <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/pwe_title_color" android:id="@+id/text_card_type_label" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginBottom="3dp"/>
+    <View android:background="@color/pwe_divider_color" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginBottom="5dp"/>
+    <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:background="@drawable/custom_background_white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="25dp" android:layout_marginRight="25dp">
+        <EditText android:textSize="16sp" android:textColor="@color/pwe_text_color" android:textColorHint="@color/pwe_hint_color" android:id="@+id/edit_card_number" android:background="@color/white" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Enter card number" android:maxLength="23" android:layout_weight="1" android:inputType="phone"/>
+        <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="3">
+            <ImageView android:id="@+id/imgv_card_type" android:layout_width="55dp" android:layout_height="32dp" android:src="@drawable/ic_default_card_type"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="12sp" android:textColor="@color/pwe_error_color" android:id="@+id/text_card_no_error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25dp"/>
+    <EditText android:textSize="16sp" android:textColor="@color/pwe_text_color" android:textColorHint="@color/pwe_hint_color" android:id="@+id/edit_name_on_card" android:background="@drawable/custom_background_white" android:padding="7dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="25dp" android:layout_marginTop="5dp" android:layout_marginRight="25dp" android:hint="Name on card" android:inputType="textPersonName"/>
+    <TextView android:textSize="12sp" android:textColor="@color/pwe_error_color" android:id="@+id/text_name_on_card_error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25dp"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/linear_exp_date_holder_dc" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="25dp" android:layout_marginTop="5dp" android:layout_marginRight="25dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/custom_background_white" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <Spinner android:id="@+id/spin_deb_exp_month" android:paddingLeft="5dp" android:paddingTop="5dp" android:paddingRight="5dp" android:paddingBottom="5dp" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp"/>
+            </LinearLayout>
+            <TextView android:textSize="12sp" android:textColor="@color/pwe_error_color" android:id="@+id/text_exp_month_error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/custom_background_white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp">
+                <Spinner android:id="@+id/spin_deb_exp_yr" android:paddingLeft="5dp" android:paddingTop="5dp" android:paddingRight="5dp" android:paddingBottom="5dp" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <TextView android:textSize="12sp" android:textColor="@color/pwe_error_color" android:id="@+id/text_exp_year_error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="25dp" android:layout_marginTop="5dp" android:layout_marginRight="25dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <EditText android:textSize="16sp" android:textColor="@color/pwe_text_color" android:textColorHint="@color/pwe_hint_color" android:gravity="center" android:id="@+id/edit_cvv_number" android:background="@drawable/custom_background_white" android:paddingLeft="8dp" android:paddingTop="5.5dp" android:paddingRight="8dp" android:paddingBottom="5.5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint=" CVV " android:maxLength="4" android:inputType="numberPassword"/>
+            <TextView android:textSize="12sp" android:textColor="@color/pwe_error_color" android:id="@+id/text_cvv_error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="25dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp">
+        <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@+id/linear_check_cvv_holder" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatCheckBox android:layout_gravity="bottom" android:id="@+id/check_dont_have_cvv" android:layout_width="20dp" android:layout_height="20dp" android:button="@xml/new_check"/>
+            <TextView android:textColor="@color/pwe_icon_text_color" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" I do not have CVV number"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="left" android:orientation="horizontal" android:id="@+id/linear_check_save_card_holder" android:layout_width="wrap_content" android:layout_height="match_parent">
+            <androidx.appcompat.widget.AppCompatCheckBox android:id="@+id/check_save_card" android:layout_width="20dp" android:layout_height="20dp" android:button="@xml/new_check"/>
+            <TextView android:textColor="@color/pwe_icon_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" Save my card"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

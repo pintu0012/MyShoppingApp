@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="5dp">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="5dp">
+            <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:layout_weight="0.3">
+                <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@color/pwe_text_color" android:gravity="left" android:id="@+id/text_discount_code_list" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <Button android:textSize="12sp" android:textColor="@color/pwe_button_text_color" android:gravity="center" android:id="@+id/btn_apply_discount_code_list" android:background="@drawable/pwe_custom_button" android:layout_width="match_parent" android:layout_height="30dp" android:text="Apply" android:layout_weight="0.7" android:textAllCaps="false"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:textColor="@color/pwe_note_color" android:id="@+id/text_description_discount_code_list" android:layout_width="match_parent" android:layout_height="wrap_content" android:text=""/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

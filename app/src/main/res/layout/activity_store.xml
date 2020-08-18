@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/background_eff2" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/ui_revamp_toolbar_layout"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/store_products_rv" android:padding="@dimen/dimen_12dp" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/cart" android:layout_below="@+id/bar_layout"/>
+    <ProgressBar android:id="@+id/progress_dialog" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_16dp" android:layout_alignTop="@+id/store_products_rv" android:layout_centerHorizontal="true" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="?android:attr/progressBarStyle"/>
+    <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/ui_revamp_bottom_cart"/>
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item>
+        <selector>
+            <item android:state_selected="true" android:drawable="@color/white"/>
+            <item android:state_focused="false" android:state_selected="false" android:state_pressed="false" android:drawable="@color/white"/>
+        </selector>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <stroke android:width="0.1dp" android:color="@color/black"/>
+        </shape>
+    </item>
+</layer-list>

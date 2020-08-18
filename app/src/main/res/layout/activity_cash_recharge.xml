@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_eff2">
+
+    <include layout="@layout/ui_revamp_toolbar_layout" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar_layout"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dimen_5dp"
+        app:cardElevation="0dp"
+        app:cardPreventCornerOverlap="false"
+        app:contentPaddingBottom="@dimen/dimen_16dp"
+        app:contentPaddingLeft="@dimen/dimen_12dp"
+        app:contentPaddingRight="@dimen/dimen_12dp"
+        app:contentPaddingTop="@dimen/dimen_16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/recharge_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proximanovasemibold"
+                android:text="@string/recharge_amount_label"
+                android:textColor="@color/black2d383c"
+                android:textSize="@dimen/size_16sp" />
+
+            <RelativeLayout
+                android:id="@+id/amount_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recharge_label"
+                android:layout_marginTop="@dimen/margin_20dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/rupee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/proxima_nova_reg"
+                    android:paddingLeft="@dimen/dimen_5dp"
+                    android:paddingRight="@dimen/dimen_5dp"
+                    android:text="₹"
+                    android:textColor="@color/color_747e"
+                    android:textSize="@dimen/text_size_16sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/amount_input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/amount_edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/proxima_nova_reg"
+                        android:hint="@string/enter_the_recharge_amount_text"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/margin_20dp"
+                        android:paddingRight="@dimen/margin_20dp"
+                        android:tag="com.userexperior.dontmask"
+                        android:textColor="@color/black2d383c"
+                        android:textSize="@dimen/text_size_16sp"
+                        app:backgroundTint="@color/background_eff2" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/cash_recharge_warning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/amount_layout"
+                android:fontFamily="@font/proxima_nova_reg"
+                android:text="@string/cash_recharge_warning_label"
+                android:textColor="@color/black2d383c"
+                android:textSize="@dimen/text_size_11sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_start_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cash_recharge_warning"
+                android:layout_marginTop="@dimen/margin_24dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false">
+
+                <EditText
+                    android:id="@+id/input_start_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ui_revamp_calender_icon"
+                    android:drawableRight="@drawable/ui_revamp_calender_icon"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/proxima_nova_reg"
+                    android:hint="@string/date_label"
+                    android:maxLines="1"
+                    android:tag="com.userexperior.dontmask"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/greyd747e82"
+                    android:textSize="@dimen/text_size_14sp"
+                    app:backgroundTint="@color/color_afb5" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/recharge_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/input_layout_start_date"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_24dp"
+                android:alpha="0.4"
+                android:background="@drawable/ui_revamp_update_subscription_btn_green_background"
+                android:enabled="false"
+                android:fontFamily="@font/proximanovasemibold"
+                android:minWidth="125dp"
+                android:minHeight="@dimen/margin_30dp"
+                android:paddingLeft="@dimen/dimen_10dp"
+                android:paddingTop="@dimen/dimen_8dp"
+                android:paddingRight="@dimen/dimen_10dp"
+                android:paddingBottom="@dimen/dimen_8dp"
+                android:text="@string/recharge"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_11sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

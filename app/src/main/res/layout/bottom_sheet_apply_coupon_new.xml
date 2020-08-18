@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/pwe_background" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp">
+    <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:id="@+id/apply_discount_toolbar" android:background="@drawable/toolbar_gradient" android:padding="10dp" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:maxHeight="?attr/actionBarSize" android:minHeight="?attr/actionBarSize">
+        <ImageView android:id="@+id/image_apply_discount_back" android:layout_width="25dp" android:layout_height="25dp" android:layout_margin="5dp"/>
+        <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/pwe_action_bar_text_color" android:id="@+id/text_domain_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp"/>
+    </LinearLayout>
+    <include layout="@layout/common_header_layout"/>
+    <include layout="@layout/discount_code_info_layout"/>
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp" android:layout_marginBottom="10dp">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="5dp">
+            <EditText android:textSize="16sp" android:textColor="@color/pwe_text_color" android:textColorHint="@color/pwe_hint_color" android:gravity="left" android:id="@+id/edit_discount_coupon_code" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" android:hint="Enter discount code" android:layout_weight="0.3"/>
+            <Button android:textSize="14sp" android:textColor="@color/pwe_button_text_color" android:gravity="center" android:id="@+id/btn_apply_discount_coupon_code" android:background="@drawable/pwe_custom_button" android:layout_width="match_parent" android:layout_height="30dp" android:text="Apply" android:layout_weight="0.7" android:textAllCaps="false"/>
+        </LinearLayout>
+        <TextView android:textColor="@color/pwe_error_color" android:layout_gravity="left" android:id="@+id/text_discount_code_apply_error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25dp" android:layout_marginBottom="10dp" android:text=""/>
+    </LinearLayout>
+    <TextView android:textColor="@color/pwe_text_color" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Or"/>
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp" android:layout_marginBottom="10dp">
+        <TextView android:textColor="@color/pwe_text_color" android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp" android:layout_marginBottom="10dp" android:text="Choose Discount"/>
+        <View android:background="@color/pwe_divider_color" android:layout_width="match_parent" android:layout_height="2dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+        <ListView android:id="@+id/list_discount_codes" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="25dp" android:layout_marginRight="25dp" android:divider="@color/pwe_divider_color" android:dividerHeight="0.5dp"/>
+        <LinearLayout android:gravity="center" android:id="@+id/linear_no_data_holder" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textColor="@color/pwe_note_color" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Discount codes are not available"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

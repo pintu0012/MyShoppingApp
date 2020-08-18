@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:padding="24dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ProgressBar android:theme="@style/AppThemeBlackAccent" android:gravity="center" android:id="@+id/progressBarCircularIndeterminate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+    <TextView android:textSize="16sp" android:textColor="@color/black" android:id="@+id/upgrade_title_textview" android:padding="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Loading..." android:layout_toRightOf="@+id/progressBarCircularIndeterminate" android:layout_alignParentRight="true"/>
+</RelativeLayout>

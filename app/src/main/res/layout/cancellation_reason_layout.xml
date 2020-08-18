@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/linear_cancellation_reason_holder" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <TextView android:textSize="15sp" android:textStyle="bold" android:textColor="@color/pwe_note_color" android:gravity="center_horizontal" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/cancel_reason_header"/>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvCancellationReasons" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@+id/linear_other_reason_text_holder" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/pwe_note_color" android:gravity="left" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Please describe below"/>
+                <EditText android:textSize="13sp" android:textColor="@color/pwe_text_color" android:textColorHint="@color/pwe_note_color" android:gravity="top|left|center_vertical|center_horizontal|center" android:id="@+id/edit_other_reason" android:background="@drawable/custom_background_white" android:padding="10dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="15dp" android:layout_marginTop="5dp" android:layout_marginRight="15dp" android:layout_marginBottom="10dp" android:hint="Type here.." android:maxLines="5" android:minLines="1"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:background="@color/pwe_button_color" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:textSize="14sp" android:textColor="@color/pwe_button_text_color" android:id="@+id/btn_continue_txn" android:background="@color/pwe_button_color" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="50dp" android:text="Continue" android:layout_weight="1" android:textAllCaps="false"/>
+        <View android:layout_gravity="center" android:background="@color/white" android:layout_width="0.5dp" android:layout_height="35dp"/>
+        <Button android:textSize="14sp" android:textColor="@color/pwe_button_text_color" android:id="@+id/btn_abort_txn" android:background="@color/pwe_button_color" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="50dp" android:text="Abort" android:layout_weight="1" android:textAllCaps="false"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:background="@drawable/toolbar_gradient" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="?attr/actionBarSize"/>
+    <LinearLayout android:orientation="vertical" android:background="@color/pwe_background" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include layout="@layout/pwe_test_env_layout"/>
+        <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <WebView android:id="@+id/webview_process_payment" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            </LinearLayout>
+            <ProgressBar android:layout_gravity="center" android:id="@+id/process_payment_circular_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyleLarge"/>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="right" android:orientation="vertical" android:id="@+id/donelayout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <View android:id="@+id/doneemptyview" android:background="@color/kapchatwhite" android:layout_width="1dp" android:layout_height="?attr/actionBarSize" android:layout_marginTop="15dp" android:layout_marginBottom="15dp"/>
+    <TextView android:textSize="17sp" android:textColor="@color/kapchatwhite" android:gravity="center" android:id="@+id/individual_done_btn" android:background="@null" android:paddingLeft="10dp" android:paddingRight="15dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" Next" android:drawablePadding="3dp" android:layout_alignTop="@+id/doneemptyview" android:layout_alignBottom="@+id/doneemptyview"/>
+</RelativeLayout>

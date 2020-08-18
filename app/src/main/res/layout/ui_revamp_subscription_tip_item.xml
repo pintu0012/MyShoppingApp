@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:paddingTop="@dimen/dimen_12dp" android:paddingBottom="@dimen/dimen_12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/subscription_tip_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ui_revamp_bag_icon" android:layout_centerVertical="true"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/tip_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_15dp" android:layout_toRightOf="@+id/subscription_tip_icon">
+        <TextView android:textSize="@dimen/textsize_12" android:textColor="@color/color_cc00" android:id="@+id/tip_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hang a bag on your door" android:fontFamily="@font/proximanovasemibold"/>
+        <TextView android:textSize="@dimen/textsize_11sp" android:textColor="@color/color_4d59" android:id="@+id/tip_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_4dp" android:text="Don’t forget to hang a bag on your door everyday. This will ensure that the items will remain fresh and intact." android:fontFamily="@font/proxima_nova_reg"/>
+    </LinearLayout>
+</RelativeLayout>

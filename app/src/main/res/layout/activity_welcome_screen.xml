@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_welcome_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_welcome_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="@string/appvirality_welcome_title"
+            android:textColor="#ff0000"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp">
+
+            <com.appvirality.appviralityui.custom.RoundedImageView
+                android:id="@+id/appvirality_user_profile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/user_image" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/appvirality_reward_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_horizontal"
+                android:textColor="#ff0000"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/referral_code_layout"
+                android:layout_width="230dp"
+                android:layout_height="51dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:visibility="gone">
+
+                <View
+                    android:id="@+id/border_line"
+                    android:layout_width="230dp"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#ff0000" />
+
+                <EditText
+                    android:id="@+id/editTextReferralCode"
+                    android:layout_width="230dp"
+                    android:layout_height="50dp"
+                    android:layout_above="@+id/border_line"
+                    android:background="@null"
+                    android:gravity="bottom|center_vertical|center_horizontal|center"
+                    android:hint="@string/appvirality_welcome_referral_code"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/appvirality_btnsignup"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/btn_welcome_claim"
+                android:ellipsize="end"
+                android:lines="1"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp"
+                android:text="@string/appvirality_welcome_sign_up"
+                android:textColor="#ffffff"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/appvirality_skip_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/appvirality_welcome_skip"
+            android:textColor="#ff0000"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/profile_stuff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_eff2"
+    android:padding="@dimen/margin_24dp">
+
+    <RelativeLayout
+        android:id="@+id/registered_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hello_text"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:fontFamily="@font/proximanovasemibold"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_16sp" />
+
+        <TextView
+            android:id="@+id/hello_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/proxima_nova_reg"
+            android:maxLines="1"
+            android:text="@string/hello_text_nav_drawer"
+            android:textColor="@color/black2d383c"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_text_view"
+            android:layout_marginTop="@dimen/dimen_10dp">
+
+            <ImageView
+                android:id="@+id/location_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ui_revamp_nav_bar_location_icon" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_6dp"
+                android:layout_toRightOf="@+id/location_icon"
+                android:fontFamily="@font/proxima_nova_reg"
+                android:includeFontPadding="false"
+                android:text="13 B, Sobha Dream Acres, Panathur Road, Panathur, Bangalore."
+                android:textColor="@color/black2d383c"
+                android:textSize="@dimen/textsize_12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/unregistered_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/name_text_view_unreg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hello_text_unreg"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:fontFamily="@font/proximanovasemibold"
+            android:maxLines="1"
+            android:text="Customer"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_16sp" />
+
+        <TextView
+            android:id="@+id/hello_text_unreg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/proxima_nova_reg"
+            android:maxLines="1"
+            android:text="@string/hello_text_nav_drawer"
+            android:textColor="@color/black2d383c"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_text_view_unreg"
+            android:layout_marginTop="@dimen/dimen_10dp">
+
+            <ImageView
+                android:id="@+id/location_icon_unreg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ui_revamp_nav_bar_location_icon" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_6dp"
+                android:layout_toRightOf="@+id/location_icon_unreg"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/city_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/city_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/proximanovasemibold"
+                        android:includeFontPadding="false"
+                        android:text="Bangalore"
+                        android:textColor="@color/black2d383c"
+                        android:textSize="@dimen/textsize_14sp" />
+
+                    <ImageView
+                        android:id="@+id/down_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_6dp"
+                        android:layout_toRightOf="@+id/city_name_tv"
+                        android:src="@drawable/ui_revamp_header_down_arrow" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/state_country_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/city_layout"
+                    android:layout_marginTop="@dimen/margin_4dp"
+                    android:fontFamily="@font/proxima_nova_reg"
+                    android:includeFontPadding="false"
+                    android:text="Karnataka, India"
+                    android:textColor="@color/greyd747e82"
+                    android:textSize="@dimen/textsize_12" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login_now_header"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/ui_revamp_button_bg_green"
+            android:fontFamily="@font/proximanovasemibold"
+            android:minWidth="94dp"
+            android:minHeight="34dp"
+            android:text="@string/login_now_label"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_11sp" />
+    </RelativeLayout>
+</RelativeLayout>

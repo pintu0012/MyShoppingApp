@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/AppTheme.AppBarOverlay" android:id="@+id/bar_layout" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:background="@color/white" android:layout_width="match_parent" android:layout_height="?android:attr/actionBarSize" app:popupTheme="@style/AppTheme.PopupOverlay">
+            <TextView android:textSize="18sp" android:textColor="@color/toolbar_title_color" android:gravity="center" android:layout_gravity="center" android:id="@+id/toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/margin_18dp" android:maxLines="1" android:fontFamily="@font/proximanovasemibold"/>
+        </androidx.appcompat.widget.Toolbar>
+        <com.google.android.material.tabs.TabLayout android:id="@+id/tab_layout" android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/margin_40dp" app:tabIndicatorColor="@color/green84c225" app:tabIndicatorFullWidth="false" app:tabIndicatorHeight="@dimen/margin_3dp" app:tabMode="0" app:tabTextColor="@color/greyeff2f4"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <RelativeLayout android:background="@color/greyeff2f4" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintBottom_toTopOf="@+id/cart" app:layout_constraintTop_toBottomOf="@+id/bar_layout">
+        <androidx.viewpager.widget.ViewPager android:id="@+id/view_pager" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        <TextView android:textSize="@dimen/textsize_14sp" android:ellipsize="end" android:id="@+id/no_products_found" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_products_found" android:maxLines="1" android:layout_centerInParent="true" android:fontFamily="@font/proxima_nova_reg"/>
+    </RelativeLayout>
+    <include android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@+id/bottombar" layout="@layout/ui_revamp_bottom_cart"/>
+    <com.raincan.app.p010v2.views.BottomBar android:id="@+id/bottombar" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

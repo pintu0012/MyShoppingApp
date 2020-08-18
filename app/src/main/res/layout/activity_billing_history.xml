@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_eff2"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <include layout="@layout/ui_revamp_toolbar_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar_layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:padding="@dimen/dimen_16dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/date_range_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="0dp"
+                app:contentPaddingLeft="@dimen/dimen_16dp"
+                app:contentPaddingRight="@dimen/dimen_16dp"
+                app:contentPaddingTop="@dimen/dimen_12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_start_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/input_start_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ui_revamp_calender_icon"
+                            android:drawableRight="@drawable/ui_revamp_calender_icon"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/proxima_nova_reg"
+                            android:hint="@string/ui_revamp_start_date_label"
+                            android:maxLines="1"
+                            android:text="15 Jun 2019"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/greyd747e82"
+                            android:textSize="@dimen/text_size_14sp"
+                            app:backgroundTint="@color/color_afb5" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_end_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_15dp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/input_end_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ui_revamp_calender_icon"
+                            android:drawableRight="@drawable/ui_revamp_calender_icon"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/proxima_nova_reg"
+                            android:hint="@string/ui_revamp_end_date_label"
+                            android:maxLines="1"
+                            android:text="15 Jun 2019"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/greyd747e82"
+                            android:textSize="@dimen/text_size_14sp"
+                            app:backgroundTint="@color/color_afb5" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/get_bill_btn"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/margin_24dp"
+                        android:layout_marginBottom="@dimen/dimen_16dp"
+                        android:background="@drawable/ui_revamp_update_subscription_btn_green_background"
+                        android:fontFamily="@font/proximanovasemibold"
+                        android:minWidth="125dp"
+                        android:minHeight="@dimen/margin_30dp"
+                        android:paddingLeft="@dimen/dimen_10dp"
+                        android:paddingTop="@dimen/dimen_8dp"
+                        android:paddingRight="@dimen/dimen_10dp"
+                        android:paddingBottom="@dimen/dimen_8dp"
+                        android:text="@string/get_bill_label"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_11sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/billing_history_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/date_range_card"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:layout_marginBottom="@dimen/margin_2dp"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/transactions_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proximanovasemibold"
+                    android:text="@string/transactions_label"
+                    android:textColor="@color/black2d383c"
+                    android:textSize="@dimen/size_16sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/transactions_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/transactions_label"
+                    android:layout_marginTop="@dimen/dimen_10dp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/send_bill_btn"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/transactions_recyclerview"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:background="@drawable/ui_revamp_update_subscription_btn_green_background"
+                    android:fontFamily="@font/proximanovasemibold"
+                    android:minWidth="125dp"
+                    android:minHeight="@dimen/margin_30dp"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:paddingTop="@dimen/dimen_8dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:paddingBottom="@dimen/dimen_8dp"
+                    android:text="@string/send_bill_label"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_11sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

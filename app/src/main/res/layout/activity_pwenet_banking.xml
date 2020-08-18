@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/linear_root_pwenet" android:background="@color/pwe_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_header_layout"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="0.7">
+            <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <include layout="@layout/pwe_test_env_layout"/>
+                    <LinearLayout android:orientation="vertical" android:background="@color/pwe_background" android:paddingTop="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="vertical" android:id="@+id/linear_nb_view_holder" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+                                    <com.easebuzz.payment.kit.ExpandableHeightGridView android:id="@+id/popular_banks_grid" android:background="@color/pwe_background" android:layout_width="match_parent" android:layout_height="match_parent" android:numColumns="3"/>
+                                </LinearLayout>
+                                <LinearLayout android:orientation="horizontal" android:background="@drawable/custom_background_white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp">
+                                    <listfilter.SearchableSpinner android:gravity="center" android:id="@+id/search_spinner" android:padding="5dp" android:layout_width="match_parent" android:layout_height="40dp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <include layout="@layout/discount_code_info_layout"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+        <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@+id/linear_pay_button_holder" android:background="@color/pwe_background" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="0.15">
+            <include layout="@layout/pwe_proceed_button_layout"/>
+        </LinearLayout>
+        <include layout="@layout/cancellation_reason_layout"/>
+    </LinearLayout>
+</LinearLayout>

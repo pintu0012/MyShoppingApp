@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/background_eff2" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/bar_layout">
+        <RelativeLayout android:id="@+id/container" android:paddingLeft="@dimen/dimen_16dp" android:paddingTop="@dimen/dimen_12dp" android:paddingRight="@dimen/dimen_16dp" android:paddingBottom="@dimen/dimen_12dp" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:id="@+id/how_it_works_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_16dp" android:layout_below="@+id/subscription_successful_card">
+                <TextView android:textSize="@dimen/textsize_14sp" android:textColor="@color/color_cc00" android:id="@+id/how_it_works_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/how_it_works_label" android:fontFamily="@font/proximanovasemibold"/>
+                <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_12dp" android:layout_below="@+id/how_it_works_label" app:cardBackgroundColor="@color/white" app:cardCornerRadius="@dimen/dimen_5dp" app:cardElevation="0dp" app:cardPreventCornerOverlap="false" app:contentPaddingLeft="@dimen/margin_15dp" app:contentPaddingRight="@dimen/dimen_10dp">
+                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/how_it_works_rv" android:layout_width="match_parent" android:layout_height="wrap_content" android:overScrollMode="never"/>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+            <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_16dp" android:layout_below="@+id/topup_successful_card" layout="@layout/ui_revamp_subscription_successful_card"/>
+            <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/margin_2dp" layout="@layout/ui_revamp_topup_successful_card"/>
+            <include android:id="@+id/tip_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_16dp" android:layout_below="@+id/topup_successful_card" layout="@layout/ui_revamp_subscription_tip_item"/>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+    <include layout="@layout/ui_revamp_toolbar_layout"/>
+</RelativeLayout>

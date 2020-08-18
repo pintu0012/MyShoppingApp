@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:theme="@style/AppTheme.AppBarOverlay" android:id="@+id/bar_layout" android:background="@color/background_ffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?android:attr/actionBarSize">
+        <ImageView android:layout_gravity="center" android:id="@+id/toolbar_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ui_revamp_home_logo"/>
+    </androidx.appcompat.widget.Toolbar>
+    <RelativeLayout android:id="@+id/searchView" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_16dp" android:layout_marginRight="@dimen/dimen_16dp" android:layout_marginBottom="@dimen/dimen_12dp" android:layout_below="@+id/toolbar">
+        <EditText android:textSize="@dimen/text_size_14sp" android:textColorHint="@color/color_5f6c" android:gravity="left|center_vertical|center_horizontal|center|start" android:id="@+id/editText_search" android:tag="com.userexperior.dontmask" android:background="@drawable/ui_revamp_shape_bg" android:padding="@dimen/dimen_8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/search_text_label" android:ems="10" android:singleLine="true" android:drawableLeft="@drawable/ui_revamp_search_icon" android:drawablePadding="@dimen/dimen_10dp" android:drawableStart="@drawable/ui_revamp_search_icon" android:fontFamily="@font/proxima_nova_reg"/>
+    </RelativeLayout>
+</com.google.android.material.appbar.AppBarLayout>

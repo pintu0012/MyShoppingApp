@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:paddingTop="@dimen/margin_12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_12dp" android:layout_marginRight="@dimen/margin_12dp">
+    <TextView android:textSize="@dimen/textsize_14sp" android:textColor="@color/black2d383c" android:id="@+id/main_area_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ahmedabad-Gandhinagar" android:fontFamily="@font/proximanovasemibold"/>
+    <TextView android:textSize="@dimen/text_size_12sp" android:textColor="@color/greyd747e82" android:id="@+id/sub_area_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_4dp" android:text="Gujarat, India"/>
+    <View android:background="@color/background_default" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="@dimen/margin_12dp"/>
+</LinearLayout>

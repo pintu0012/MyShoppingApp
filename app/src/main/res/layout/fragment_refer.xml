@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_eff2"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_12dp"
+        android:padding="@dimen/campaign_image_margin">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/earnings_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proxima_nova_reg"
+                android:text="Your Earnings:"
+                android:textColor="@color/color_cc00"
+                android:textSize="@dimen/textsize_14sp" />
+
+            <TextView
+                android:id="@+id/earnings_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_5dp"
+                android:fontFamily="@font/proximanovasemibold"
+                android:textColor="@color/color_cc00"
+                android:textSize="@dimen/textsize_14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_campaign_bg"
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/campaign_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_campaign_bg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/campaign_title_desc_left_right_margin"
+            android:layout_marginTop="@dimen/campaign_share_code_padding"
+            android:layout_marginRight="@dimen/campaign_title_desc_left_right_margin"
+            android:fontFamily="@font/proximanovasemibold"
+            android:gravity="center"
+            android:textColor="@color/color_cc00"
+            android:textSize="@dimen/textsize_14sp" />
+
+        <Button
+            android:id="@+id/btn_invite_contacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/campaign_desc"
+            android:layout_marginTop="@dimen/campaign_title_desc_left_right_margin"
+            android:background="?attr/av_earnings_bar_color"
+            android:text="Invite Contacts"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ref_code_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_invite_contacts"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_30dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_your_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proxima_nova_reg"
+                android:gravity="center"
+                android:text="Referral Code"
+                android:textColor="@color/color_9797"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="96dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="3.5dp"
+                android:background="@color/color_9797" />
+
+            <TextView
+                android:id="@+id/appvirality_share_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/appvirality_dashed_border"
+                android:drawableRight="@drawable/ui_revamp_icon_copy_av"
+                android:drawablePadding="@dimen/campaign_title_desc_top_margin"
+                android:fontFamily="@font/proximanovasemibold"
+                android:gravity="center"
+                android:paddingLeft="@dimen/margin_11dp"
+                android:paddingTop="@dimen/dimen_8dp"
+                android:paddingRight="@dimen/margin_11dp"
+                android:paddingBottom="@dimen/dimen_8dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_14sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/share_via_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appvirality_custom_share_link"
+            android:layout_marginTop="@dimen/margin_34dp">
+
+            <TextView
+                android:id="@+id/tv_or_share_via"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/campaign_title_desc_top_margin"
+                android:layout_marginRight="@dimen/campaign_title_desc_top_margin"
+                android:fontFamily="@font/proxima_nova_reg"
+                android:text="Share Via"
+                android:textColor="@color/color_9797"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="96dp"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/tv_or_share_via"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3.5dp"
+                android:background="@color/color_9797" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/social_share_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/share_via_layout"
+            android:layout_marginTop="@dimen/margin_25dp">
+
+            <TextView
+                android:id="@+id/appvirality_no_social_installed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/campaign_desc_text_size"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/social_items_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/your_ref_link_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ref_code_layout"
+            android:layout_marginTop="@dimen/margin_20dp">
+
+            <TextView
+                android:id="@+id/tv_your_ref_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/campaign_title_desc_top_margin"
+                android:layout_marginRight="@dimen/campaign_title_desc_top_margin"
+                android:fontFamily="@font/proxima_nova_reg"
+                android:text="Referral Link"
+                android:textColor="@color/color_9797"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="96dp"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/tv_your_ref_link"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3.5dp"
+                android:background="@color/color_9797" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/appvirality_custom_share_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/your_ref_link_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/campaign_share_code_padding"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/appvirality_share_link"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/proxima_nova_reg"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/campaign_title_desc_top_margin"
+                android:background="@drawable/ui_revamp_icon_copy_av" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/social_share_layout"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="30dp">
+
+            <com.appvirality.WhiteLabel
+                android:id="@+id/white_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:id="@+id/tv_tnc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/white_label"
+                android:layout_alignParentRight="true"
+                android:text="T&amp;C"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

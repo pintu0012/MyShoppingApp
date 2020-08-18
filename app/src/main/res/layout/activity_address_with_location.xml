@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greyeff2f4">
+
+    <include
+        android:id="@+id/include6"
+        layout="@layout/ui_revamp_search_societies_toolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_16dp"
+        app:layout_constraintBottom_toBottomOf="0"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintStart_toStartOf="0"
+        app:layout_constraintTop_toBottomOf="@+id/include6">
+
+        <TextView
+            android:id="@+id/nearby_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/proximanovasemibold"
+            android:paddingBottom="@dimen/margin_12dp"
+            android:text="@string/nearby_societies"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_14sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="0"
+            app:layout_constraintTop_toTopOf="0" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/location_societies_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ui_revamp_common_border_layout"
+            android:clipToPadding="false"
+            app:layout_constraintBottom_toBottomOf="0"
+            app:layout_constraintEnd_toEndOf="0"
+            app:layout_constraintStart_toStartOf="0"
+            app:layout_constraintTop_toBottomOf="@+id/nearby_text"
+            app:layout_constraintVertical_bias="0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/no_societies_found_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16dp"
+        android:background="@drawable/ui_revamp_common_border_layout"
+        android:padding="@dimen/margin_12dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="0"
+        app:layout_constraintStart_toStartOf="0"
+        app:layout_constraintTop_toBottomOf="@+id/include6">
+
+        <ImageView
+            android:id="@+id/dialog_image"
+            android:layout_width="@dimen/size_108dp"
+            android:layout_height="@dimen/size_108dp"
+            app:layout_constraintEnd_toEndOf="0"
+            app:layout_constraintStart_toStartOf="0"
+            app:layout_constraintTop_toTopOf="0"
+            app:srcCompat="@drawable/ui_revamp_no_societies_found" />
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:fontFamily="@font/proxima_nova_reg"
+            android:gravity="center"
+            android:text="@string/no_societies_found"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_16sp"
+            app:layout_constraintEnd_toEndOf="0"
+            app:layout_constraintStart_toStartOf="0"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_image" />
+
+        <TextView
+            android:id="@+id/dialog_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_6dp"
+            android:layout_marginTop="@dimen/margin_12dp"
+            android:layout_marginRight="@dimen/margin_6dp"
+            android:fontFamily="@font/proxima_nova_reg"
+            android:gravity="center"
+            android:text="@string/other_address_text"
+            android:textColor="@color/greyd747e82"
+            android:textSize="@dimen/textsize_14sp"
+            app:layout_constraintEnd_toEndOf="0"
+            app:layout_constraintStart_toStartOf="0"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_title" />
+
+        <TextView
+            android:id="@+id/select_other_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:background="@drawable/ui_revamp_update_subscription_btn_green_background"
+            android:fontFamily="@font/proximanovasemibold"
+            android:gravity="center"
+            android:minWidth="128dp"
+            android:minHeight="@dimen/margin_30dp"
+            android:text="@string/request_service"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_11sp"
+            app:layout_constraintBottom_toBottomOf="0"
+            app:layout_constraintEnd_toEndOf="0"
+            app:layout_constraintStart_toStartOf="0"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_description" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

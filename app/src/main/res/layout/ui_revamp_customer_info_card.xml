@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/customer_info_card_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ui_revamp_login_rounded_white_bg"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_24dp"
+    android:paddingRight="@dimen/margin_24dp">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/enter_number_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_24dp"
+                android:fontFamily="@font/proximanovasemibold"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/enter_details_label"
+                android:textColor="@color/color_cc00"
+                android:textSize="@dimen/textsize_14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <EditText
+                        android:id="@+id/first_name_edttxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_30dp"
+                        android:layout_marginRight="@dimen/margin_15dp"
+                        android:layout_weight="1"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ.,&apos;-abcdefghijklmnopqrstuvwxyz "
+                        android:fontFamily="@font/proxima_nova_reg"
+                        android:hint="@string/first_name_label"
+                        android:inputType="textCapSentences"
+                        android:maxLength="15"
+                        android:maxLines="1"
+                        android:textColor="@color/black2d383c"
+                        android:textColorHint="@color/color_afb5"
+                        android:textSize="@dimen/textsize_14sp"
+                        app:backgroundTint="@drawable/ui_revamp_editext_tint_selector" />
+
+                    <EditText
+                        android:id="@+id/last_name_edttxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_15dp"
+                        android:layout_marginTop="@dimen/margin_30dp"
+                        android:layout_weight="1"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ.,&apos;-abcdefghijklmnopqrstuvwxyz "
+                        android:fontFamily="@font/proxima_nova_reg"
+                        android:hint="@string/last_name_label"
+                        android:inputType="textCapSentences"
+                        android:maxLength="15"
+                        android:maxLines="1"
+                        android:textColor="@color/black2d383c"
+                        android:textColorHint="@color/color_afb5"
+                        android:textSize="@dimen/textsize_14sp"
+                        app:backgroundTint="@drawable/ui_revamp_editext_tint_selector" />
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/email_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_25dp"
+                    app:errorEnabled="false"
+                    app:hintEnabled="false">
+
+                    <EditText
+                        android:id="@+id/email_id_edttxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/proxima_nova_reg"
+                        android:hint="@string/email_address_label"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:textColor="@color/black2d383c"
+                        android:textColorHint="@color/color_afb5"
+                        android:textSize="@dimen/textsize_14sp"
+                        app:backgroundTint="@drawable/ui_revamp_editext_tint_selector" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/referral_code_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_25dp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/referral_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintEnabled="false">
+
+                        <EditText
+                            android:id="@+id/referral_code_edttxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/proxima_nova_reg"
+                            android:gravity="center_vertical"
+                            android:hint="@string/referral_code_hint"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:textColor="@color/black2d383c"
+                            android:textColorHint="@color/color_afb5"
+                            android:textSize="@dimen/textsize_14sp"
+                            app:backgroundTint="@drawable/ui_revamp_editext_tint_selector" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/apply_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/referral_layout"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/proximanovasemibold"
+                        android:includeFontPadding="false"
+                        android:paddingTop="@dimen/dimen_8dp"
+                        android:text="@string/apply_label"
+                        android:textAllCaps="true"
+                        android:textColor="@color/green84c225"
+                        android:textSize="@dimen/textsize_13sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/submit_button"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_40dp"
+                android:layout_marginBottom="@dimen/margin_32dp"
+                android:background="@drawable/ui_revamp_button_bg_green"
+                android:fontFamily="@font/proximanovasemibold"
+                android:minWidth="144dp"
+                android:minHeight="36dp"
+                android:text="@string/submit"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_11sp" />
+
+            <TextView
+                android:id="@+id/skip_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_26dp"
+                android:fontFamily="@font/proximanovasemibold"
+                android:text="@string/skip_label"
+                android:textAllCaps="true"
+                android:textColor="@color/green84c225"
+                android:textSize="@dimen/textsize_13sp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

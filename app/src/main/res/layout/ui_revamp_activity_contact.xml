@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/parent_linear_layout" android:background="@color/background_default" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/ui_revamp_toolbar_layout"/>
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="@dimen/margin_16dp">
+        <ImageView android:layout_gravity="center" android:layout_width="125dp" android:layout_height="160dp" android:layout_marginTop="28dp" android:src="@drawable/contact_us_icon"/>
+        <TextView android:textSize="14sp" android:gravity="center" android:paddingLeft="@dimen/margin_12dp" android:paddingRight="@dimen/margin_12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_20dp" android:text="In any case of query please feel free to contact us" android:fontFamily="@font/proxima_nova_reg"/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/email_layout" android:paddingLeft="@dimen/margin_20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+            <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/v2_mail"/>
+            <TextView android:textSize="@dimen/textsize_16sp" android:paddingLeft="@dimen/margin_10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/contact_us_label_two" android:fontFamily="@font/proximanovasemibold"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/phone_layout" android:paddingLeft="@dimen/margin_20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_20dp">
+            <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/v2_contact_us"/>
+            <TextView android:textSize="@dimen/textsize_16sp" android:id="@+id/phone1" android:paddingLeft="@dimen/margin_10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/contact_us_label_one" android:fontFamily="@font/proximanovasemibold"/>
+            <TextView android:textSize="@dimen/textsize_16sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="/" android:fontFamily="@font/proximanovasemibold"/>
+            <TextView android:textSize="@dimen/textsize_16sp" android:id="@+id/phone2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/contact_us_label_number2" android:fontFamily="@font/proximanovasemibold"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/chat_support_laout" android:paddingLeft="@dimen/margin_20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_20dp">
+            <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ui_revamp_chat_icon"/>
+            <TextView android:textSize="@dimen/textsize_16sp" android:paddingLeft="@dimen/margin_10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Chat with us" android:fontFamily="@font/proximanovasemibold"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

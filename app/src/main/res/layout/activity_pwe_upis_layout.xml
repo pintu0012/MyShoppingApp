@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/linear_root_pwenet" android:background="@color/pwe_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_header_layout"/>
+    <include layout="@layout/pwe_test_env_layout"/>
+    <LinearLayout android:orientation="vertical" android:background="@color/pwe_background" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@+id/linear_nb_view_holder" android:background="@color/pwe_background" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="5dp" android:layout_weight="0.85">
+                <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+                            <com.easebuzz.payment.kit.ExpandableHeightGridView android:id="@+id/grid_upi_options" android:background="@color/pwe_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:numColumns="3"/>
+                            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/linear_upi_address_holder" android:background="@drawable/custom_background_white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                                    <EditText android:textSize="13sp" android:textColor="@color/pwe_text_color" android:textColorHint="@color/pwe_hint_color" android:gravity="center" android:layout_gravity="center" android:id="@+id/edit_upi_username" android:background="@color/white" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="40dp" android:hint="username" android:singleLine="true"/>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                                    <TextView android:gravity="center" android:layout_gravity="left|center_vertical|center_horizontal|center" android:id="@+id/text_at_upi_sym" android:background="@color/white" android:layout_width="wrap_content" android:layout_height="40dp"/>
+                                    <EditText android:textSize="13sp" android:textColor="@color/pwe_text_color" android:textColorHint="@color/pwe_hint_color" android:gravity="center" android:id="@+id/edit_upi_psp" android:background="@color/white" android:padding="5dp" android:layout_width="match_parent" android:layout_height="40dp" android:hint="enter psp" android:singleLine="true"/>
+                                    <Spinner android:gravity="center" android:id="@+id/spinner_upi_psp" android:background="@color/white" android:paddingLeft="5dp" android:paddingRight="5dp" android:focusableInTouchMode="true" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <TextView android:textSize="14sp" android:textColor="@color/pwe_error_color" android:id="@+id/text_upi_address_error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="bottom" android:layout_width="match_parent" android:layout_height="match_parent">
+                            <include layout="@layout/discount_code_info_layout"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+            <include layout="@layout/pwe_layout_certificates"/>
+            <include layout="@layout/pwe_proceed_button_layout"/>
+        </LinearLayout>
+        <include layout="@layout/cancellation_reason_layout"/>
+    </LinearLayout>
+</LinearLayout>

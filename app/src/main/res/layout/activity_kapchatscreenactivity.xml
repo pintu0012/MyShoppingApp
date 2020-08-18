@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/primaryView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/kc_activity_background"
+        android:scaleType="fitXY" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/divider"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="2dp" />
+
+    <TextView
+        android:id="@+id/kapchatonlinestatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/kapchatblack"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="You are not connected to internet"
+        android:textColor="@color/kapchatwhite"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/popupNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kapchatonlinestatus"
+        android:background="@color/kapchatwhite"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/popupMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/clearpopup"
+            android:gravity="center_vertical"
+            android:textColor="@color/kapchatsecondarytext" />
+
+        <TextView
+            android:id="@+id/clearpopup"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/kapchat_clearpopup"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/timelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/popupNotification"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="?attr/kc_date_layout"
+        android:paddingLeft="5dp"
+        android:paddingTop="3dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="3dp"
+        android:text="timelayout"
+        android:textColor="?attr/kc_date_textcolor"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/toolbartitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="?attr/kc_toolbartitlename"
+            android:textColor="?attr/kc_toolbartitlecolor"
+            android:textSize="?attr/kc_toolbartitlesize" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/interaction_layout"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="?attr/kc_chatlist_bottomlayout_divider"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/interaction_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/divider_bottom"
+        android:layout_marginBottom="5dp"
+        android:background="@color/kapchatwhite"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/timer_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="10dp"
+                android:text="Do you want to end the chat ?"
+                android:textColor="?attr/kc_notification_text_color" />
+
+            <TextView
+                android:id="@+id/notification_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="10dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/answer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/chatbottomlayout"
+        android:layout_marginBottom="5dp"
+        android:background="?attr/kc_chatlist_bottomlayout_divider" />
+
+    <RelativeLayout
+        android:id="@+id/chatbottomlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+            android:id="@+id/kapchatbottomtextlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="2dp"
+            android:layout_toLeftOf="@+id/sendbutton"
+            android:background="?attr/kc_typemessage_et_background">
+
+            <ImageView
+                android:id="@+id/emoimage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0.75"
+                android:alpha="0.5"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/emoji"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="em"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/typemessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toLeftOf="@+id/imageupload"
+                android:autoLink="web"
+                android:autoText="true"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="top"
+                android:hint="?attr/kc_typemessage_et_hint"
+                android:inputType="none|text|textCapSentences|textMultiLine"
+                android:maxLength="2000"
+                android:maxLines="?attr/kc_typemessage_et_maxlines"
+                android:minLines="?attr/kc_typemessage_et_minlines"
+                android:singleLine="false"
+                android:textColor="?attr/kc_typemessage_et_text_color"
+                android:textColorHint="?attr/kc_typemessage_et_hint_color"
+                android:textSize="?attr/kc_typemessage_et_text_size" />
+
+            <ImageView
+                android:id="@+id/imageupload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="3dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:src="@drawable/kapchatcapture"
+                android:text="ii"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/sendbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/kapchatbottomtextlayout"
+            android:layout_alignBottom="@+id/kapchatbottomtextlayout"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="?attr/kc_message_send_btn_margin_left"
+            android:layout_marginRight="?attr/kc_message_send_btn_margin_right"
+            android:gravity="center"
+            android:paddingLeft="?attr/kc_message_send_btn_padding_left"
+            android:paddingRight="?attr/kc_message_send_btn_padding_right"
+            android:scaleType="centerInside"
+            android:src="?attr/kc_message_send_button"
+            android:text=""
+            android:visibility="visible" />
+    </RelativeLayout>
+</RelativeLayout>

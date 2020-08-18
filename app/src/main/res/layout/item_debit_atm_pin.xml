@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:layout_gravity="left" android:orientation="horizontal" android:id="@+id/linear_payment_option" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/img_debit_atm_pin" android:padding="5dp" android:layout_width="50dp" android:layout_height="40dp" android:layout_marginLeft="5dp"/>
+        <LinearLayout android:gravity="left" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp">
+            <TextView android:textSize="14sp" android:textColor="@color/pwe_text_color" android:id="@+id/text_debit_atm_pin_bank" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

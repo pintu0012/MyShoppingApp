@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/root_linear_pwe_payment_option" android:background="@color/pwe_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_header_layout"/>
+    <include layout="@layout/discount_code_info_layout"/>
+    <include layout="@layout/pwe_test_env_layout"/>
+    <LinearLayout android:orientation="vertical" android:background="@color/pwe_background" android:paddingTop="5dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@+id/linear_payopt_view_holder" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp" android:layout_weight="1.4">
+                <View android:background="@color/pwe_divider_color" android:layout_width="match_parent" android:layout_height="1dp"/>
+                <GridView android:id="@+id/list_payment_option" android:background="@color/pwe_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:numColumns="3"/>
+            </LinearLayout>
+            <include layout="@layout/pwe_layout_certificates"/>
+            <include layout="@layout/pwe_proceed_button_layout"/>
+        </LinearLayout>
+        <include layout="@layout/cancellation_reason_layout"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_linear_debit_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pwe_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_header_layout" />
+
+    <include layout="@layout/pwe_test_env_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pwe_background"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:id="@+id/linear_dc_view_holder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.7"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:paddingBottom="5dp">
+
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="50dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/ola_complete_icon" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@color/pwe_divider_color" />
+
+                            <LinearLayout
+                                android:id="@+id/linear_olamoney_eligibitly_holder"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:id="@+id/text_ola_mobile_number_message"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:gravity="center_horizontal"
+                                    android:padding="5dp"
+                                    android:text=""
+                                    android:textColor="@color/pwe_text_color"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/text_ola_message"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:gravity="center_horizontal"
+                                    android:padding="5dp"
+                                    android:text=""
+                                    android:textColor="@color/pwe_test_note_color"
+                                    android:textSize="15sp" />
+
+                                <TextView
+                                    android:id="@+id/text_ola_error_details"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:gravity="center_horizontal"
+                                    android:padding="5dp"
+                                    android:text=""
+                                    android:textColor="@color/pwe_error_color"
+                                    android:textSize="17sp" />
+
+                                <ImageView
+                                    android:id="@+id/img_refresh"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/swipe_image_click_effect"
+                                    android:padding="5dp"
+                                    android:src="@drawable/ic_refresh" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom">
+
+                            <include layout="@layout/discount_code_info_layout" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/pwe_layout_certificates" />
+
+                    <include layout="@layout/pwe_proceed_button_layout" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <include layout="@layout/cancellation_reason_layout" />
+    </LinearLayout>
+</LinearLayout>

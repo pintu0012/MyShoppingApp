@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:background="#368ed8" android:layout_width="match_parent" android:layout_height="100dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:textSize="13sp" android:textColor="#ffffff" android:id="@+id/appvirality_btnremindlater" android:background="@drawable/btn_launch_bg" android:layout_width="0dp" android:layout_height="46dp" android:text="@string/appvirality_launch_remind_later" android:layout_weight="0.5"/>
+        <Button android:textSize="13sp" android:textColor="#ffffff" android:id="@+id/appvirality_btnlaunchbar" android:background="@drawable/btn_launch_bg" android:layout_width="0dp" android:layout_height="46dp" android:text="@string/appvirality_launch_refer" android:layout_weight="0.5" android:radius="4dp"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/linearLayout2" android:padding="10dp" android:layout_width="match_parent" android:layout_height="65dp" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <ImageView android:id="@+id/appvirality_launchimage" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/megaphone"/>
+        <TextView android:textColor="#ffffff" android:layout_gravity="center" android:id="@+id/appvirality_txtlaunchmessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:text="@string/appvirality_launch_msg"/>
+    </LinearLayout>
+</RelativeLayout>

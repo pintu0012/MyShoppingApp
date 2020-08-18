@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/selectedimage" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="8dp" android:scaleType="centerInside" android:layout_above="@+id/addcaption"/>
+        <EditText android:textColor="@color/kapchatblack" android:id="@+id/addcaption" android:background="@color/kapchatwhite" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Add A Caption              " android:maxLines="3" android:maxLength="200" android:layout_alignParentBottom="true" android:inputType="textMultiLine"/>
+    </RelativeLayout>
+</LinearLayout>

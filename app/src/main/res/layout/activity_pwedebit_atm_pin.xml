@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/root_linear_debit_atm_pin" android:background="@color/pwe_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_header_layout"/>
+    <include layout="@layout/pwe_test_env_layout"/>
+    <LinearLayout android:orientation="vertical" android:background="@color/pwe_background" android:paddingTop="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@+id/linear_deb_atm_holder" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                    <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="#000000" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:layout_marginBottom="5dp" android:text="Select Bank"/>
+                    <View android:background="@color/pwe_divider_color" android:layout_width="match_parent" android:layout_height="1dp"/>
+                    <EditText android:textColor="@color/pwe_text_color" android:textColorHint="@color/pwe_hint_color" android:gravity="center" android:id="@+id/edit_searchview_atm_debit_pin" android:background="@drawable/custom_background_white" android:padding="5dp" android:layout_width="match_parent" android:layout_height="40dp" android:layout_margin="5dp" android:hint=" Search" android:drawableLeft="@drawable/search_icon_grey"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="0.6">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                            <ListView android:id="@+id/list_atm_debit_pin_banks" android:background="@drawable/listview_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:divider="@color/pwe_divider_color" android:dividerHeight="0.5dp"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="bottom" android:id="@+id/linear_discount_code_parent_holder" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="2">
+                            <include layout="@layout/discount_code_info_layout"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <include layout="@layout/pwe_proceed_button_layout"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <include layout="@layout/cancellation_reason_layout"/>
+    </LinearLayout>
+</LinearLayout>
